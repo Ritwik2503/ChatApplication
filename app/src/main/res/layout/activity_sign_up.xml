@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignUp">
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/google"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:contentDescription="@string/logo" />
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/app_logo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edt_background"
+        android:hint="@string/name"
+        android:importantForAutofill="no"
+        android:paddingStart="13dp"
+        tools:ignore="TextContrastCheck"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/edt_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edt_background"
+        android:hint="@string/email"
+        android:importantForAutofill="no"
+        android:paddingStart="13dp"
+        tools:ignore="TextContrastCheck"
+        android:inputType="textEmailAddress" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/password"
+        app:passwordToggleEnabled="true"
+        android:importantForAutofill="no"
+        android:layout_below="@id/edt_email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:hintEnabled="false"
+        android:paddingTop="10dp"
+        android:layout_marginRight="20dp"
+
+        android:background="@drawable/edt_background">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/transparent"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="13dp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edt_button"
+        android:text="@string/sign_up"
+        android:layout_below="@id/password"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
